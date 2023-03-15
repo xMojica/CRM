@@ -17,7 +17,6 @@ code {
   --tertiaryColor: #4b4952;
 }
 
-
 body {
   background-color: var(--primaryColor);
 }
@@ -30,16 +29,25 @@ header {
 }
 
 #logo {
-    margin: 5px 0px 0 50px;
+    margin: 0px 0px 0 80px;
 }
 
 nav {
-  margin-left: 10%;
+  margin-left: 8%;
   margin-top: 25px;
   background-color: var(--secondaryColor);
   width: 65%;
   height: 50%;
   border-radius: 50px;
+  display: flex;
+  align-items: center;
+ 
+}
+
+li {
+  cursor: pointer;
+  user-select: none;
+  
 }
 
 .li_1 { /*Migas de pan Off*/
@@ -49,11 +57,6 @@ nav {
   border-radius: 50px;
   color: var(--tertiaryColor);
   background-color: var(--secondaryColor);
-}
-
-button {
-  margin: 0;
-  padding: 0;
 }
 
 .li_2 {  /* Migas de pan On*/
@@ -67,5 +70,6 @@ button {
 }
 
 #profile {
-  margin-left: 400px;
+  margin: auto;
+
 }
