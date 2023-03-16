@@ -1,3 +1,9 @@
+:root {
+  --primaryColor: #004f4d;
+  --secondaryColor: #1f2024;
+  --tertiaryColor: #4b4952;
+}
+
 body {
   margin: 0;
   font-family:'Roboto', 'Oxygen',
@@ -5,22 +11,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primaryColor);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-:root {
-  --primaryColor: #004f4d;
-  --secondaryColor: #1f2024;
-  --tertiaryColor: #4b4952;
-}
 
-
-body {
-  background-color: var(--primaryColor);
-}
 
 header {
   background-color: #004f4d;
@@ -67,5 +65,5 @@ button {
 }
 
 #profile {
-  margin-left: 400px;
+  margin-left: 60%;
 }
