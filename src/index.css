@@ -19,12 +19,9 @@ code {
     monospace;
 }
 
-<<<<<<< HEAD
-=======
 body {
   background-color: var(--primaryColor);
 }
->>>>>>> 1530bd6becd614bdaa6d399286a4020904f0b56a
 
 header {
   background-color: #004f4d;
@@ -75,10 +72,7 @@ li {
 }
 
 #profile {
-<<<<<<< HEAD
   margin-left: 60%;
-=======
   margin: auto;
 
->>>>>>> 1530bd6becd614bdaa6d399286a4020904f0b56a
 }
