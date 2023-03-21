@@ -4,10 +4,6 @@
   --tertiaryColor: #4b4952;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
 
 body {
   font-family: sans-serif, 'Oxygen',
@@ -32,14 +28,14 @@ header {
 }
 
 #logo {
-  margin: 0px 0px 0 4%;
+  margin: 0 0 0 4%;
 }
 
 nav {
   margin-left: 10%;
   display: flex;
   width: 60%;
-  height: 60px;
+  height: 80%;
   background-color: var(--secondaryColor);
   border-radius: 100px;
   justify-content: flex-start;
@@ -55,12 +51,12 @@ ul {
 li {
   display: flex;
   margin-left: 5%;
-  padding: 8px;
+  padding: 1%;
   cursor: pointer;
   user-select: none;
   border-radius: 100px;
   list-style: none;
-  font-size: 20px;
+  font-size: unset;
 }
 
 .li_1 {
@@ -85,7 +81,7 @@ li {
 /******************************/
 
 #div_avatar {
-  margin-top: 5%;
+  margin-top: 2em;
   width: auto;
   display: flex;
   justify-content: center;
@@ -94,16 +90,16 @@ li {
 /*****************************/
 
 #div_input_buscador {
-  margin-top: 2%;
+  margin-top: 1em;
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 50px;
+  height: 3em;
 }
 
 #input_buscador {
-  padding-left: 18px;
-  font-size: 20px;
+  padding-left: 2%;
+  font-size: unset;
   border: none;
   border-radius: 100px;
   width: 30%;
@@ -116,7 +112,7 @@ li {
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 40px;
+  height: 6%;
   margin-top: 3%;
  }
 
@@ -124,8 +120,9 @@ li {
   background-color: var(--secondaryColor);
   border-radius: 100px;
   width: 10%;
-  font-size: 20px;
+  font-size: unset;
   color: var(--tertiaryColor);
   cursor: pointer;
   border: none;
+  height: 3em;
  }
