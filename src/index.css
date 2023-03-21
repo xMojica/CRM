@@ -40,23 +40,22 @@ nav {
   height: 50%;
   border-radius: 50px;
   display: flex;
-  align-items: center;
  
 }
 
 li {
   cursor: pointer;
   user-select: none;
-  
 }
 
 .li_1 { /*Migas de pan Off*/
-  display: inline;
+  display:inline;
   padding: 7px 7px  7px 7px;
   margin:0px 50px 0px 10px;
   border-radius: 50px;
   color: var(--tertiaryColor);
   background-color: var(--secondaryColor);
+  align-items: flex-start;
 }
 
 .li_2 {  /* Migas de pan On*/
@@ -70,6 +69,5 @@ li {
 }
 
 #profile {
-  margin: auto;
-
+  margin-left: 400px;
 }
