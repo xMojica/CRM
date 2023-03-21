@@ -60,6 +60,7 @@ li {
   user-select: none;
   border-radius: 100px;
   list-style: none;
+  font-size: 20px;
 }
 
 .li_1 {
@@ -79,3 +80,52 @@ li {
   margin-left: auto;
   margin-right: 5%;
 }
+
+
+/******************************/
+
+#div_avatar {
+  margin-top: 5%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/*****************************/
+
+#div_input_buscador {
+  margin-top: 2%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+#input_buscador {
+  padding-left: 18px;
+  font-size: 20px;
+  border: none;
+  border-radius: 100px;
+  width: 30%;
+  outline: none;
+}
+
+ /****************************/
+
+ #div_search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  margin-top: 3%;
+ }
+
+ #search {
+  background-color: var(--secondaryColor);
+  border-radius: 100px;
+  width: 10%;
+  font-size: 20px;
+  color: var(--tertiaryColor);
+  cursor: pointer;
+  border: none;
+ }
