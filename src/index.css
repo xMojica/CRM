@@ -106,17 +106,17 @@ li {
   outline: none;
 }
 
- /****************************/
+/****************************/
 
- #div_search {
+#div_search {
   width: 100%;
   display: flex;
   justify-content: center;
   height: 6%;
   margin-top: 3%;
- }
+}
 
- #search {
+#search {
   background-color: var(--secondaryColor);
   border-radius: 100px;
   width: 10%;
@@ -125,4 +125,20 @@ li {
   cursor: pointer;
   border: none;
   height: 3em;
- }
+}
+
+#search:disabled {
+  pointer-events: none;
+}
+
+#search:hover {
+  color: var(--tertiaryColor);
+  background-color: var(--secondaryColor);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+#search:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
