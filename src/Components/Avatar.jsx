@@ -12,8 +12,10 @@ function Avatar_genero() {
       return avatar_mujer;
     } else if (genero === 'hombre') {
       return avatar_hombre;
-    } else {
+    } else if (genero === 'neutro'){
       return avatar_neutro;
+    }else{
+      return;
     }
   }
 
