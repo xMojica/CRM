@@ -21,7 +21,7 @@ function Avatar_genero() {
 
   return (
     <div id='div_avatar'>
-      <img width='300px' className='avatar' src={avatar('hombre')} alt="Avatar" />
+      <img width='300px' className='avatar' src={avatar('mujer')} alt="Avatar" />
     </div>
   )
 }

@@ -2,6 +2,7 @@
   --primaryColor: #004f4d;
   --secondaryColor: #1f2024;
   --tertiaryColor: #4b4952;
+  --cuaternaryColor: rgb(113, 113, 113);
 }
 
 body {
@@ -75,7 +76,7 @@ li:active {
 
 .li_1 {
   /*Migas de pan Off*/
-  color: var(--tertiaryColor);
+  color: var(--cuaternaryColor);
   background-color: var(--secondaryColor);
 }
 
@@ -119,6 +120,20 @@ li:active {
   outline: none;
 }
 
+#input_buscador:disabled {
+  pointer-events: none;
+}
+
+#input_buscador:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+#input_buscador:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
 /****************************/
 
 #div_search {
@@ -138,6 +153,8 @@ li:active {
   cursor: pointer;
   border: none;
   height: 3em;
+  font-size:medium ;
+  color: var(--cuaternaryColor);
 }
 
 #search:disabled {
@@ -145,7 +162,7 @@ li:active {
 }
 
 #search:hover {
-  color: var(--tertiaryColor);
+ 
   background-color: var(--secondaryColor);
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);

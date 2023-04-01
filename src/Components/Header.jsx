@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './../images/logo.jpg'
+
 const Header = () => { 
 
     function change(atri) {
@@ -12,7 +13,6 @@ const Header = () => {
             select.setAttribute('class', 'li_1')
         }
     }
-
 
     return (
         <header>
