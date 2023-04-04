@@ -5,7 +5,7 @@ import './../../Styles/Home/Home.css'
 import Header from './Header'
 import Avatar from './Avatar'
 import Buscador from './Buscador'
-import Search from './Search'
+
 
 
 
@@ -15,7 +15,6 @@ const Home = () => {
             <Header />
             <Avatar/>
             <Buscador/>
-            <Search/>
         </>
     );
 }

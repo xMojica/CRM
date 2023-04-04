@@ -1,37 +1,47 @@
-import React from 'react'
-import { useState } from 'react';
-
-import mock from '../../mock.json'
+import React, { useState } from 'react';
+import mock from '../../mock.json';
+import Search from './Search';
 
 function Buscador() {
-    const [cedula, setCedula] = useState("");
+    const [cedula, setCedula] = useState('');
+
+    function buscar() {
+        const persona = mock.find((p) => p.Id === cedula);
+        return persona;
+
+    }
 
     function validar() {
         const regex = /^\d{1,10}$/;
         if (regex.test(cedula)) {
-
-            mock.find((e) => {
-                if (e.Id === cedula) {
-                    console.log(e.Id)
-                    console.log(e.Name)
-                    console.log(e.Gender)
-                    console.log(e.Email)
-                }
-                return false
-            })
+            console.log('La entrada ' + cedula + ' es válida');
+            const personaEncontrada = buscar();
+            console.log(personaEncontrada);
 
         } else {
-            console.log("La entrada " + cedula + " no es válida");
+            console.log('La entrada ' + cedula + ' no es válida');
+            return false
         }
     }
-    validar()
 
+    function handleChange(event) {
+        setCedula(parseInt(event.target.value));
+    }
+
+    validar();
     return (
-        <div id='div_input_buscador'>
-            <input id='input_buscador' onChange={() => setCedula(document.getElementById('input_buscador').value)} placeholder='Document' type="text"></input>
-        </div>
-    )
-
+        <>
+            <div id='div_input_buscador'>
+                <input
+                    id='input_buscador'
+                    onChange={handleChange}
+                    placeholder='Document'
+                    type='text'
+                />
+            </div>
+            <Search />
+        </>
+    );
 }
 
-export default Buscador
+export default Buscador;
