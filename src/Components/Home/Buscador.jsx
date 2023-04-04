@@ -5,19 +5,21 @@ import Search from './Search';
 function Buscador() {
     const [cedula, setCedula] = useState('');
 
-    function buscar() {
-        const persona = mock.find((p) => p.Id === cedula);
-        return persona;
+    validar()
 
+    function buscar(){
+        const persona = mock.find((p) => p.Id === cedula);
+        return persona
     }
 
     function validar() {
         const regex = /^\d{1,10}$/;
         if (regex.test(cedula)) {
             console.log('La entrada ' + cedula + ' es válida');
-            const personaEncontrada = buscar();
-            console.log(personaEncontrada);
-
+            const personaencontrada = buscar()
+            if(personaencontrada !== undefined){
+                return true
+            }
         } else {
             console.log('La entrada ' + cedula + ' no es válida');
             return false
@@ -28,7 +30,6 @@ function Buscador() {
         setCedula(parseInt(event.target.value));
     }
 
-    validar();
     return (
         <>
             <div id='div_input_buscador'>
@@ -39,7 +40,9 @@ function Buscador() {
                     type='text'
                 />
             </div>
-            <Search />
+            {validar() === true ? <Search param={cedula}/> : null}
+
+            
         </>
     );
 }

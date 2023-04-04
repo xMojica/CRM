@@ -1,10 +1,16 @@
 import React from 'react'
-//import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
-function Search() {
+function Search(props) {
+    const history = useHistory();
+
+    function pasar(){
+        history.push('/Usuario/' + props.param);
+    }
+
     return (
         <div id='div_search'>
-            <button id='search'>Seach</button>
+            <button id='search' onClick={pasar}>Seach</button>
         </div>
     )
 }

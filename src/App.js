@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from './Components/Home/Home.jsx';
 import Login from './Components/Login/Login.jsx';
 import Usuario from './Components/Usuario/Usuario.jsx';
@@ -11,13 +11,13 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <Routes>
-        <Route exact path="/" Component={Login} />
-        <Route path="/Home" Component={Home} />
-        <Route path="/Usuario" component={Usuario} />
-        <Route path="/Cases" component={Cases} />
-      </Routes>
-    </Router>
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route path="/Home" component={Home} />
+          <Route path="/Usuario/:" component={Usuario} />
+          <Route path="/Cases" component={Cases} />
+        </Switch>
+      </Router>
     </div>
   );
 }
