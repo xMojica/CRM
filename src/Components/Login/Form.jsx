@@ -26,7 +26,9 @@ function Form() {
         e.preventDefault();
         let persona = buscar();
         if (persona !== null) {
-            history.push('/home/'+persona.id);
+            localStorage.setItem("nombre" , persona.first_name);
+            localStorage.setItem("genero" , persona.gender);
+            history.push('/home');
            
         } else {
             document.getElementById('mensaje').style.display = 'block';

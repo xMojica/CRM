@@ -3,7 +3,6 @@ import logo from './../../images/logo.jpg'
 import './../../Styles/Home/Header.css'
 
 const Header = (props) => { 
-
     function change(atri) {
         
         const select = document.getElementById(atri);
@@ -14,7 +13,7 @@ const Header = (props) => {
             select.setAttribute('class', 'li_1')
         }
     }
-    
+
     return (
         <header>
             <img id='logo' src={logo} alt="Logo" width="100px" />
@@ -29,6 +28,7 @@ const Header = (props) => {
             </nav>
         </header >
     );
+    
 
 }
 

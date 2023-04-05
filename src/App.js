@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from './Components/Home/Home.jsx';
 import Login from './Components/Login/Login.jsx';
-import Usuario from './Components/Usuario/Usuario.jsx';
+import Data from './Components/Data/Data.jsx';
 import Cases from "./Components/Cases/Cases.jsx";
 
 function App() {
@@ -11,9 +11,10 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Login} />
-          <Route path="/Home/:id" component={Home} />
-          <Route path="/Usuario" component={Usuario} />
+          <Route path="/Home" component={Home} />
+          <Route path="/Data" component={Data} />
           <Route path="/Cases" component={Cases} />
+          <Route path="/*" component={404} />
         </Switch>
       </Router>
     </div>
