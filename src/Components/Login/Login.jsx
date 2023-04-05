@@ -3,7 +3,6 @@ import Logo from '../../images/Logo.png'
 import Form from './Form';
 
 function Login() {
-
   return (
     <>
       <div className='divcontenedor'>

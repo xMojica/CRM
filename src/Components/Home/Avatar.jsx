@@ -20,7 +20,7 @@ function Avatar_genero(props) {
 
     return (
       <div id='div_avatar'>
-        <img width='300px' className='avatar' src={avatar(props.gender)} alt="Avatar" />
+        <img width='300px' className='avatar' src={avatar(props.genero)} alt="Avatar" />
       </div>
     )
   }

@@ -4,7 +4,6 @@ import { useHistory } from 'react-router-dom';
 import mock from './../../mock.json'
 import { useState,useRef } from 'react';
 
-
 function Form() {
     const [password, setPassword] = useState('');
     const [user, setUser] = useState('');
@@ -27,7 +26,8 @@ function Form() {
         e.preventDefault();
         let persona = buscar();
         if (persona !== null) {
-          history.push('/home/' + persona.first_name)
+            history.push('/home/'+persona.id);
+           
         } else {
             document.getElementById('mensaje').style.display = 'block';
             document.getElementById('mensaje').classList.add('animacion');

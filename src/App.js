@@ -4,8 +4,6 @@ import Login from './Components/Login/Login.jsx';
 import Usuario from './Components/Usuario/Usuario.jsx';
 import Cases from "./Components/Cases/Cases.jsx";
 
-
-
 function App() {
 
   return (
@@ -13,7 +11,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Login} />
-          <Route path="/Home" component={Home} />
+          <Route path="/Home/:id" component={Home} />
           <Route path="/Usuario" component={Usuario} />
           <Route path="/Cases" component={Cases} />
         </Switch>

@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './../../images/logo.jpg'
 import './../../Styles/Home/Header.css'
 
-const Header = () => { 
+const Header = (props) => { 
 
     function change(atri) {
         
@@ -14,7 +14,7 @@ const Header = () => {
             select.setAttribute('class', 'li_1')
         }
     }
-
+    
     return (
         <header>
             <img id='logo' src={logo} alt="Logo" width="100px" />
@@ -23,7 +23,7 @@ const Header = () => {
                     <li onClick={(e) => { change("home") }} className='li_2' id='home'>Home</li>
                     <li onClick={(e) => { change("data") }} className='li_1' id='data'>Data</li>
                     <li onClick={(e) => { change("cases") }} className='li_1' id='cases'>Cases</li>
-                    <li onClick={(e) => { change("profile") }} className='li_1' id='profile'>Profile</li>
+                    <li onClick={(e) => { change("profile") }} className='li_1' id='profile'>{props.nombre}</li>
 
                 </ul>
             </nav>
