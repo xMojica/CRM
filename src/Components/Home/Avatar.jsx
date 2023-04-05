@@ -5,7 +5,7 @@ import avatar_neutro from "./../../images/AvatarNeutro-removebg-preview.png";
 
 
 
-function Avatar_genero() {
+function Avatar_genero(props) {
 
   function avatar(genero) {
     
@@ -20,7 +20,7 @@ function Avatar_genero() {
 
     return (
       <div id='div_avatar'>
-        <img width='300px' className='avatar' src={avatar('Female')} alt="Avatar" />
+        <img width='300px' className='avatar' src={avatar(props.gender)} alt="Avatar" />
       </div>
     )
   }

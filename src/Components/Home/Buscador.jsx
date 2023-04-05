@@ -8,7 +8,7 @@ function Buscador() {
     validar()
 
     function buscar(){
-        const persona = mock.find((p) => p.Id === cedula);
+        const persona = mock.find((p) => p.id === cedula);
         return persona
     }
 

@@ -10,7 +10,7 @@ function Search(props) {
 
     return (
         <div id='div_search'>
-            <button id='search' onClick={pasar}>Seach</button>
+            <button id='search' onClick={pasar}>Search</button>
         </div>
     )
 }

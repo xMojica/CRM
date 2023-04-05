@@ -1,10 +1,44 @@
 import React from 'react';
 import '../../Styles/Login/Login.css'
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import mock from './../../mock.json'
+import { useState,useRef } from 'react';
+
 
 function Form() {
-  return (
-    <form className="form">
+    const [password, setPassword] = useState('');
+    const [user, setUser] = useState('');
+    const history = useHistory();
+    const messageRef = useRef(null);
+
+    function buscar() {
+        let persona = mock.find((p) => p.Key === password && p.User === user);
+        return persona || null;
+        
+    }
+    function usuario(event){
+        setUser(event.target.value);
+    }
+    function contraseña(event){
+        setPassword(event.target.value);
+    }
+
+    function handleClick(e) {
+        e.preventDefault();
+        let persona = buscar();
+        if (persona !== null) {
+          history.push('/home/' + persona.first_name)
+        } else {
+            document.getElementById('mensaje').style.display = 'block';
+            document.getElementById('mensaje').classList.add('animacion');
+            setTimeout(function () {
+                document.getElementById('mensaje').style.display = 'none';
+              }, 4000);
+        }
+      }
+  
+    return (
+        <form className="form">
             <p id="heading">Login</p>
             <div className="field">
                 <svg
@@ -22,6 +56,7 @@ function Form() {
                     placeholder="Username"
                     className="input-field"
                     type="text"
+                    onChange={usuario}
                 />
             </div>
             <div className="field">
@@ -35,21 +70,23 @@ function Form() {
                 >
                     <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
                 </svg>
-                <input placeholder="Password" className="input-field" type="password" />
+                <input placeholder="Password"
+                    className="input-field"
+                    type="password"
+                    onChange={contraseña} />
             </div>
             <div className="btn">
-                <Link to='Home'><button className="button1">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </button></Link>
+                <button className="button1" onClick={handleClick}>Login</button>
             </div>
             <div className='btn'>
-            <Link to='Forgot'><button className="button3">Forgot Password</button></Link>
+                <button className="button3">Forgot Password</button>
             </div>
-            
-            
+            <p ref={messageRef} id='mensaje' style={{ display: "none" }}>Invalid username or password!</p>
+
+
         </form>
 
-  )
+    )
 }
 
 export default Form

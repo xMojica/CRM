@@ -6,14 +6,17 @@ import Header from './Header'
 import Avatar from './Avatar'
 import Buscador from './Buscador'
 
+const Home = (props) => {
 
+    function genero(){
+        let genero = props.gender
+        return genero 
+    }
 
-
-const Home = () => {
     return (
         <>
             <Header />
-            <Avatar/>
+            <Avatar gender={genero()}/>
             <Buscador/>
         </>
     );
