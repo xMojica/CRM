@@ -1,8 +1,9 @@
 import React from 'react';
-import Logo from '../../images/Logo.png'
+ import Logo from '../../images/Logo.png'
 import Form from './Form';
 
 function Login() {
+
   return (
     <>
       <div className='divcontenedor'>

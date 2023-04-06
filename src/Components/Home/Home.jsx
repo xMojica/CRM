@@ -11,7 +11,7 @@ const Home = () => {
   
   return (
     <>
-      <Header nombre={nombre} />
+      <Header nombre={nombre}/>
       <Avatar genero={genero} />
       <Buscador />
     </>

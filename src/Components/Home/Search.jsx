@@ -5,7 +5,7 @@ function Search(props) {
     const history = useHistory();
 
     function pasar(){
-        history.push('/Usuario/' + props.param);
+        history.push('/data/' + props.param);
     }
 
     return (

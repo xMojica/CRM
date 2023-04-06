@@ -2,7 +2,8 @@ import React from 'react';
 import '../../Styles/Login/Login.css'
 import { useHistory } from 'react-router-dom';
 import mock from './../../mock.json'
-import { useState,useRef } from 'react';
+import { useRef, useState } from 'react';
+//import axios from 'axios';
 
 function Form() {
     const [password, setPassword] = useState('');
@@ -12,13 +13,25 @@ function Form() {
 
     function buscar() {
         let persona = mock.find((p) => p.Key === password && p.User === user);
+        // let persona = {};
+        // axios.get('https://sadimi-eoya.onrender.com/api/users')
+        //  .then(response => {
+        //     
+        //  })
+        //  .catch(error => {
+        //    console.error(error);
+        //  });
+
+
+
+
         return persona || null;
-        
+
     }
-    function usuario(event){
+    function usuario(event) {
         setUser(event.target.value);
     }
-    function contraseña(event){
+    function contraseña(event) {
         setPassword(event.target.value);
     }
 
@@ -26,19 +39,19 @@ function Form() {
         e.preventDefault();
         let persona = buscar();
         if (persona !== null) {
-            localStorage.setItem("nombre" , persona.first_name);
-            localStorage.setItem("genero" , persona.gender);
+            localStorage.setItem("nombre", persona.first_name);
+            localStorage.setItem("genero", persona.gender);
             history.push('/home');
-           
+
         } else {
             document.getElementById('mensaje').style.display = 'block';
             document.getElementById('mensaje').classList.add('animacion');
             setTimeout(function () {
                 document.getElementById('mensaje').style.display = 'none';
-              }, 4000);
+            }, 4000);
         }
-      }
-  
+    }
+
     return (
         <form className="form">
             <p id="heading">Login</p>
@@ -75,7 +88,8 @@ function Form() {
                 <input placeholder="Password"
                     className="input-field"
                     type="password"
-                    onChange={contraseña} />
+                    onChange={contraseña}
+                />
             </div>
             <div className="btn">
                 <button className="button1" onClick={handleClick}>Login</button>
