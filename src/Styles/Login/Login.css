@@ -42,8 +42,13 @@
   outline: none;
   color: var(--cuaternaryColor);
   background-color: var(--secondaryColor);
-  box-shadow: inset 2px 5px 10px var(--tertiaryColor);
+  box-shadow: inset 3px 1px 2px 1px black;
 }
+
+.field:hover {
+  box-shadow: 10px 10px 20px rgb(25, 25, 25),
+             -5px -5px 10px rgb(0, 0, 0);
+ }
 
 .input-icon {
   height: 3em;
@@ -87,6 +92,8 @@
 .button1:hover {
   background-color: var(--cuaternaryColor);
   color: var(--secondaryColor);
+  box-shadow: 10px 10px 20px rgb(25, 25, 25),
+             -5px -5px 10px rgb(60, 60, 60);
 }
 
 .button3 {
@@ -105,6 +112,8 @@
 }
 
 .button3:hover {
+  box-shadow: 10px 10px 20px rgb(25, 25, 25),
+             -5px -5px 10px red;
   background-color: red;
   color: white;
 }
@@ -114,7 +123,7 @@
   margin-right: auto;
   color: red;
   animation: shake 0.5s ease-in-out;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 @keyframes shake {

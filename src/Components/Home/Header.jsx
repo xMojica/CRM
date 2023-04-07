@@ -2,7 +2,8 @@ import React from 'react';
 import logo from './../../images/logo.jpg'
 import './../../Styles/Home/Header.css'
 
-const Header = (props) => { 
+const Header = () => { 
+    const nombre = localStorage.getItem("nombre");
     function change(atri) {
         
         const select = document.getElementById(atri);
@@ -22,7 +23,7 @@ const Header = (props) => {
                     <li onClick={(e) => { change("home") }} className='li_2' id='home'>Home</li>
                     <li onClick={(e) => { change("data") }} className='li_1' id='data'>Data</li>
                     <li onClick={(e) => { change("cases") }} className='li_1' id='cases'>Cases</li>
-                    <li onClick={(e) => { change("profile") }} className='li_1' id='profile'>{props.nombre}</li>
+                    <li onClick={(e) => { change("profile") }} className='li_1' id='profile'>{nombre}</li>
 
                 </ul>
             </nav>

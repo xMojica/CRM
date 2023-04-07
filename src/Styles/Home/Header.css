@@ -4,9 +4,12 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  
 }
 
 #logo {
+  width: 8%;
+  height: 6em;
   margin: 0 0 0 4%;
 }
 
@@ -19,6 +22,8 @@ nav {
   border-radius: 100px;
   justify-content: flex-start;
   align-items: center;
+  box-shadow: 10px 10px 20px rgb(25, 25, 25),
+             -5px -5px 50px rgb(85, 85, 85);
 
 }
 
@@ -47,6 +52,8 @@ li:hover {
   background-color:var(--tertiaryColor) ;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
+  box-shadow: 10px 10px 20px rgb(25, 25, 25),
+             -5px -5px 30px rgb(80, 70, 70);
 }
 
 li:active {

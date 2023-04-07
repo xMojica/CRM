@@ -6,6 +6,7 @@ import avatar_neutro from "./../../images/AvatarNeutro-removebg-preview.png";
 
 
 function Avatar_genero(props) {
+  const genero = localStorage.getItem("genero");
 
   function avatar(genero) {
     
@@ -20,7 +21,7 @@ function Avatar_genero(props) {
 
     return (
       <div id='div_avatar'>
-        <img width='300px' className='avatar' src={avatar(props.genero)} alt="Avatar" />
+        <img width='300px' className='avatar' src={avatar(genero)} alt="Avatar" />
       </div>
     )
   }
