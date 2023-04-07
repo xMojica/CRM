@@ -1,33 +1,13 @@
-import React, { useState } from 'react';
-import mock from '../../mock.json';
+import React, { useState, useRef } from 'react';
 import Search from './Search';
 
+
 function Buscador() {
-    const [cedula, setCedula] = useState('');
+    const [cedula, setCedula] = useState(0);
+    const messageRef = useRef(null);
 
-    validar()
-
-    function buscar(){
-        const persona = mock.find((p) => p.id === cedula);
-        return persona
-    }
-
-    function validar() {
-        const regex = /^\d{1,10}$/;
-        if (regex.test(cedula)) {
-            console.log('La entrada ' + cedula + ' es válida');
-            const personaencontrada = buscar()
-            if(personaencontrada !== undefined){
-                return true
-            }
-        } else {
-            console.log('La entrada ' + cedula + ' no es válida');
-            return false
-        }
-    }
-
-    function handleChange(event) {
-        setCedula(parseInt(event.target.value));
+    function handleChange(event) {        
+            setCedula(parseInt(event.target.value));
     }
 
     return (
@@ -40,9 +20,11 @@ function Buscador() {
                     type='text'
                 />
             </div>
-            {validar() === true ? <Search param={cedula}/> : null}
+            <Search cedula={cedula}/>
+            <h4 ref={messageRef} id='mensajeDocument' style={{ display: "none" }}>User not found</h4>
 
-            
+
+
         </>
     );
 }

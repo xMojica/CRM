@@ -3,7 +3,8 @@ import logo from './../../images/logo.jpg'
 import './../../Styles/Home/Header.css'
 
 const Header = () => { 
-    const nombre = localStorage.getItem("nombre");
+    const empleado = JSON.parse(localStorage.getItem("empleado"));
+    const nombre = empleado.name;
     function change(atri) {
         
         const select = document.getElementById(atri);

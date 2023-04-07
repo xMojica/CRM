@@ -15,8 +15,7 @@ function Form() {
         axios.get(`https://sadimi-eoya.onrender.com/api/employee/${user}`)
             .then(response => {
                 if (response.data.password === password && response.data.username === user) {
-                    localStorage.setItem("nombre", response.data.name);
-                    localStorage.setItem("genero", response.data.gender);
+                    localStorage.setItem("empleado", JSON.stringify(response.data));
                     history.push('/home');
                 } else {
                     document.getElementById('mensaje').style.display = 'block';
@@ -28,6 +27,11 @@ function Form() {
             })
             .catch(error => {
                 console.error(error);
+                document.getElementById('mensaje').style.display = 'block';
+                    document.getElementById('mensaje').classList.add('animacion');
+                    setTimeout(function () {
+                        document.getElementById('mensaje').style.display = 'none';
+                    }, 4000);
             });
 
         e.preventDefault();

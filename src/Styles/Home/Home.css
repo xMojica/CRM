@@ -2,7 +2,7 @@
 /******************************/
 
 #div_avatar {
-    margin-top: 2em;
+    margin-top: 1.5em;
     width: auto;
     display: flex;
     justify-content: center;
@@ -11,7 +11,7 @@
   /*****************************/
   
   #div_input_buscador {
-    margin-top: 1em;
+    margin-top: 0.8em;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -30,19 +30,19 @@
   #input_buscador:disabled {
     pointer-events: none;
   }
-  
-  #input_buscador:hover {
-    /* box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px; */
-    transform: translateY(-2px);
-    box-shadow: 10px 10px 20px rgb(36, 46, 39),
-             -5px -5px 50px rgb(114, 116, 115);
-  }
-  
+
   #input_buscador:active {
     box-shadow: none;
     transform: translateY(0);
   }
   
+  #input_buscador:hover {
+    transform: translateY(-2px);
+    box-shadow: 10px 10px 20px rgb(36, 46, 39),
+             -5px -5px 50px rgb(114, 116, 115);
+  }
+  
+ 
   /****************************/
   
   #div_search {
@@ -51,7 +51,7 @@
     justify-content: space-around;
     height: 6%;
     margin: auto;
-    margin-top: 3%;
+    margin-top: 2%;
   }
   
   #search {
@@ -79,4 +79,21 @@
   #search:active {
     box-shadow: none;
     transform: translateY(0);
+  }
+
+  /**************************************************************/
+
+  #mensajeDocument {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
   }
