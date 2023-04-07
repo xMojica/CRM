@@ -1,6 +1,6 @@
 import React from 'react'
 import AvatarHombre from '../../images/AvatarHombre-removebg-preview.png';
-import AvatarMujer from "../../images/AvatarHombre-removebg-preview.png";
+import AvatarMujer from "../../images/AvatarMujer-removebg-preview.png";
 import AvatarNoBin from "../../images/AvatarNeutro-removebg-preview.png"
 
 function Aside() { 

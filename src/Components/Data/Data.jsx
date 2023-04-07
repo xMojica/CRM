@@ -6,7 +6,7 @@ const Data = () => {
     
     return (
         <>
-            <Header/>
+            <Header atri={"data"}/>
             <div className="contenedorMain">
                 <Aside />
                 <div className="container">

@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <>
-      <Header/>
+      <Header atri={"home"}/>
       <Avatar/>
       <Buscador />
       
