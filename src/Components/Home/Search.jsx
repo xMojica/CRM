@@ -5,29 +5,31 @@ import axios from 'axios';
 function Search(props) {
     const history = useHistory();
 
+    function error(){
+        document.getElementById('mensajeDocument').style.display = 'block';
+        document.getElementById('mensajeDocument').classList.add('animacion');
+        setTimeout(function () {
+            document.getElementById('mensajeDocument').style.display = 'none';
+        }, 4000);
+    }
+
     function buscar() {
-        axios.get(`https://sadimi-eoya.onrender.com/api/person/${props.cedula}`)
+        console.log(props.cedula)
+            axios.get(`https://sadimi-eoya.onrender.com/api/person/${props.cedula}`)
             .then(response => {
                 if (response.data.document === props.cedula) {
                     sessionStorage.setItem("cliente", JSON.stringify(response.data));
-                    pasar()
+                    pasar();
                 } else {
-                    document.getElementById('mensajeDocument').style.display = 'block';
-                    document.getElementById('mensajeDocument').classList.add('animacion');
-                    setTimeout(function () {
-                        document.getElementById('mensajeDocument').style.display = 'none';
-                    }, 4000);
+                    error();
                 }
 
             })
             .catch(()=>{
-                
-                document.getElementById('mensajeDocument').style.display = 'block';
-                document.getElementById('mensajeDocument').classList.add('animacion');
-                setTimeout(function () {
-                    document.getElementById('mensajeDocument').style.display = 'none';
-                }, 4000);
+                error()
             });
+       
+        
     }
 
     function pasar() {

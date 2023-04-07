@@ -6,9 +6,16 @@ function Buscador() {
     const [cedula, setCedula] = useState(0);
     const messageRef = useRef(null);
 
-    function handleChange(event) {        
-            setCedula(parseInt(event.target.value));
-    }
+    function handleChange(e) {
+        const inputText = e.target.value;
+        const contieneSoloNumeros = /^\d+$/.test(inputText);
+      
+        if (contieneSoloNumeros) {
+            setCedula(parseInt(e.target.value));            
+        }
+        e.preventDefault();
+      }
+      
 
     return (
         <>

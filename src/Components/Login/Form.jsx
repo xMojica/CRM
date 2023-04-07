@@ -25,8 +25,7 @@ function Form() {
                     }, 4000);
                 }
             })
-            .catch(error => {
-                console.error(error);
+            .catch(()=> {
                 document.getElementById('mensaje').style.display = 'block';
                     document.getElementById('mensaje').classList.add('animacion');
                     setTimeout(function () {

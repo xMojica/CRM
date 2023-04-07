@@ -15,8 +15,7 @@ const Header = (props) => {
     function logOut(){
         history.push('/')
     }
-    
-    
+
     return (
         <header>
             <img id='logo' src={logo} alt="Logo" width="100px" />
