@@ -11,7 +11,7 @@ const Data = () => {
                 <Aside />
                 <div className="container">
                     <div className="card">
-                        <div className="card2">Support</div>
+                        <Link to="/Support"><div className="card2">Support</div></Link>
                     </div>
                     <div className="card">
                         <div className="card2">Add service</div>

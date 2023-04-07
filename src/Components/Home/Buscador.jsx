@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import Search from './Search';
 
-
 function Buscador() {
     const [cedula, setCedula] = useState(0);
     const messageRef = useRef(null);
@@ -9,13 +8,12 @@ function Buscador() {
     function handleChange(e) {
         const inputText = e.target.value;
         const contieneSoloNumeros = /^\d+$/.test(inputText);
-      
+
         if (contieneSoloNumeros) {
-            setCedula(parseInt(e.target.value));            
+            setCedula(parseInt(e.target.value));
         }
         e.preventDefault();
-      }
-      
+    }
 
     return (
         <>
@@ -27,11 +25,9 @@ function Buscador() {
                     type='text'
                 />
             </div>
-            <Search cedula={cedula}/>
-            
+            <Search cedula={cedula} />
+
             <h4 ref={messageRef} id='mensajeDocument' style={{ display: "none" }}>User not found</h4>
-
-
 
         </>
     );
