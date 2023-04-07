@@ -21,6 +21,7 @@ function Buscador() {
                 />
             </div>
             <Search cedula={cedula}/>
+            
             <h4 ref={messageRef} id='mensajeDocument' style={{ display: "none" }}>User not found</h4>
 
 

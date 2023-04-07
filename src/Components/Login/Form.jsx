@@ -15,7 +15,7 @@ function Form() {
         axios.get(`https://sadimi-eoya.onrender.com/api/employee/${user}`)
             .then(response => {
                 if (response.data.password === password && response.data.username === user) {
-                    localStorage.setItem("empleado", JSON.stringify(response.data));
+                    sessionStorage.setItem("empleado", JSON.stringify(response.data));
                     history.push('/home');
                 } else {
                     document.getElementById('mensaje').style.display = 'block';

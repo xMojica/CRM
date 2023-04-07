@@ -6,7 +6,7 @@ import avatar_neutro from "./../../images/AvatarNeutro-removebg-preview.png";
 
 
 function Avatar_genero() {
-    const empleado = JSON.parse(localStorage.getItem("empleado"));
+    const empleado = JSON.parse(sessionStorage.getItem("empleado"));
     const genero = empleado.gender;
 
   function avatar(genero) {

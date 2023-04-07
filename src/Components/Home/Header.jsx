@@ -3,7 +3,7 @@ import logo from './../../images/logo.jpg'
 import './../../Styles/Home/Header.css'
 
 const Header = () => { 
-    const empleado = JSON.parse(localStorage.getItem("empleado"));
+    const empleado = JSON.parse(sessionStorage.getItem("empleado"));
     const nombre = empleado.name;
     function change(atri) {
         
@@ -21,7 +21,7 @@ const Header = () => {
             <img id='logo' src={logo} alt="Logo" width="100px" />
             <nav>
                 <ul>
-                    <li onClick={(e) => { change("home") }} className='li_2' id='home'>Home</li>
+                    <li onClick={(e) => { change("home") }} className='li_1' id='home'>Home</li>
                     <li onClick={(e) => { change("data") }} className='li_1' id='data'>Data</li>
                     <li onClick={(e) => { change("cases") }} className='li_1' id='cases'>Cases</li>
                     <li onClick={(e) => { change("profile") }} className='li_1' id='profile'>{nombre}</li>

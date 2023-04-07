@@ -6,11 +6,10 @@ function Search(props) {
     const history = useHistory();
 
     function buscar() {
-        console.log(props.cedula)
         axios.get(`https://sadimi-eoya.onrender.com/api/person/${props.cedula}`)
             .then(response => {
                 if (response.data.document === props.cedula) {
-                    localStorage.setItem("cliente", JSON.stringify(response.data));
+                    sessionStorage.setItem("cliente", JSON.stringify(response.data));
                     pasar()
                 } else {
                     document.getElementById('mensajeDocument').style.display = 'block';
@@ -21,8 +20,8 @@ function Search(props) {
                 }
 
             })
-            .catch(error => {
-                console.error(error);
+            .catch(()=>{
+                
                 document.getElementById('mensajeDocument').style.display = 'block';
                 document.getElementById('mensajeDocument').classList.add('animacion');
                 setTimeout(function () {

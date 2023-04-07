@@ -1,20 +1,19 @@
 import React from 'react'
-import foto from '../../images/AvatarMujer-removebg-preview.png'
-import axios from 'axios';
-import { useState } from 'react';
+import AvatarHombre from '../../images/AvatarHombre-removebg-preview.png';
+import AvatarMujer from "../../images/AvatarHombre-removebg-preview.png";
+import AvatarNoBin from "../../images/AvatarNeutro-removebg-preview.png"
 
-
-function Aside() {
-  const [data, setData] = useState({});
-  localStorage.setItem("cedulaCliente", "1037651321")
-  const cedula = localStorage.getItem("cedulaCliente")
-  axios.get(`https://sadimi-eoya.onrender.com/api/user/${cedula}`)
-    .then(response => {
-      setData(response.data)
-    })
-    .catch(error => {
-      console.error(error);
-    });
+function Aside() { 
+  let foto = "";
+  const cliente = JSON.parse(sessionStorage.getItem("cliente"));
+  
+  if (cliente.gender === 'Female') {
+    foto = AvatarMujer;
+  } else if (cliente.gender === 'Male') {
+    foto = AvatarHombre;
+  } else {
+    foto = AvatarNoBin;
+  }
 
 
 
@@ -22,12 +21,12 @@ function Aside() {
     <aside className="aside">
       <img src={foto} alt="Foto" width='100px' />
       <br />
-      <h2>{data.name}</h2>
+      <h2>{cliente.name}</h2>
       <br />
-      <div className="datos"><h2>{data.age}</h2></div>
-      <div className="datos"><h2>{data.country}</h2></div>
-      <div className="datos"><h2>{data.services}</h2></div>
-      <div className="datos"><h2>{data.email}</h2></div>
+      <div className="datos"><h2>{cliente.age}</h2></div>
+      <div className="datos"><h2>{cliente.country}</h2></div>
+      <div className="datos"><h2>{cliente.services}</h2></div>
+      <div className="datos"><h2>{cliente.email}</h2></div>
 
 
 
