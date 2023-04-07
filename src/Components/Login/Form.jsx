@@ -1,9 +1,8 @@
-import React from 'react';
-import '../../Styles/Login/Login.css'
 import { useHistory } from 'react-router-dom';
-import mock from './../../mock.json'
-import { useRef, useState } from 'react';
-//import axios from 'axios';
+import { React, useRef, useState } from 'react';
+import axios from 'axios';
+
+import '../../Styles/Login/Login.css'
 
 function Form() {
     const [password, setPassword] = useState('');
@@ -11,45 +10,36 @@ function Form() {
     const history = useHistory();
     const messageRef = useRef(null);
 
-    function buscar() {
-        let persona = mock.find((p) => p.Key === password && p.User === user);
-        // let persona = {};
-        // axios.get('https://sadimi-eoya.onrender.com/api/users')
-        //  .then(response => {
-        //     
-        //  })
-        //  .catch(error => {
-        //    console.error(error);
-        //  });
+    function handleClick(e) {
 
+        axios.get(`https://sadimi-eoya.onrender.com/api/employee/${user}`)
+            .then(response => {
+                if (response.data.password === password && response.data.username === user) {
+                    localStorage.setItem("nombre", response.data.name);
+                    localStorage.setItem("genero", response.data.gender);
+                    history.push('/home');
+                } else {
+                    document.getElementById('mensaje').style.display = 'block';
+                    document.getElementById('mensaje').classList.add('animacion');
+                    setTimeout(function () {
+                        document.getElementById('mensaje').style.display = 'none';
+                    }, 4000);
+                }
+            })
+            .catch(error => {
+                console.error(error);
+            });
 
-
-
-        return persona || null;
+        e.preventDefault();
 
     }
-    function usuario(event) {
-        setUser(event.target.value);
-    }
+
     function contraseña(event) {
         setPassword(event.target.value);
     }
 
-    function handleClick(e) {
-        e.preventDefault();
-        let persona = buscar();
-        if (persona !== null) {
-            localStorage.setItem("nombre", persona.first_name);
-            localStorage.setItem("genero", persona.gender);
-            history.push('/home');
-
-        } else {
-            document.getElementById('mensaje').style.display = 'block';
-            document.getElementById('mensaje').classList.add('animacion');
-            setTimeout(function () {
-                document.getElementById('mensaje').style.display = 'none';
-            }, 4000);
-        }
+    function usuario(event) {
+        setUser(event.target.value);
     }
 
     return (

@@ -9,9 +9,9 @@ function Avatar_genero(props) {
 
   function avatar(genero) {
     
-    if (genero === 'Female') {
+    if (genero === 'female') {
       return avatar_mujer;
-    } else if (genero === 'Male') {
+    } else if (genero === 'male') {
       return avatar_hombre;
     } else {
       return avatar_neutro;
