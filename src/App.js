@@ -2,10 +2,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from './Components/Home/Home.jsx';
 import Login from './Components/Login/Login.jsx';
 import Data from './Components/Data/Data.jsx';
-import Support from './Components/Support/Support';
-import AddService from './Components/Add Service/AddService';
-import TakeOff from './Components/TakeOff/TakeOff';
-import PQRS from './Components/PQRS/Pqrs';
+import Support from './Components/Cases/Support/Support';
+import AddService from './Components/Cases/Add Service/AddService';
+import TakeOff from './Components/Cases/TakeOff/TakeOff';
+import PQRS from './Components/Cases/PQRS/Pqrs';
 import Error from "./Components/Error/Error.jsx";
 
 function App() {

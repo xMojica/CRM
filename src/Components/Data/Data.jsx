@@ -1,8 +1,10 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom'
 import '../../Styles/Data/Data.css'
 import Header from '../Home/Header';
 import Aside from './Aside'
 const Data = () => {
+    const history = useHistory();
     
     return (
         <>
@@ -11,16 +13,16 @@ const Data = () => {
                 <Aside />
                 <div className="container">
                     <div className="card">
-                        <Link to="/Support"><div className="card2">Support</div></Link>
+                        <div className="card2" onClick={() => {history.push("/Support")}}>Support</div>
                     </div>
                     <div className="card">
-                        <div className="card2">Add service</div>
+                        <div className="card2" onClick={() => {history.push("/AddService")}}>Add service</div>
                     </div>
                     <div className="card">
-                        <div className="card2">Take off</div>
+                        <div className="card2" onClick={() => {history.push("/TakeOff")}}>Take off</div>
                     </div>
                     <div className="card">
-                        <div className="card2">PQRS</div>
+                        <div className="card2" onClick={() => {history.push("/PQRS")}}>PQRS</div>
                     </div>
                 </div>
 

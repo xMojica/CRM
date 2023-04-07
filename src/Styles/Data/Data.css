@@ -39,6 +39,7 @@
 .card2:hover {
   transform: scale(0.98);
   border-radius: 20px;
+  cursor: pointer;
 }
 
 .card:hover {
