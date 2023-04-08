@@ -14,7 +14,7 @@ function Form(props) {
     if (props.comp === "login") { // para cuando es Login y cuando sea Forgot cambie los campos
 
         function handleClick(e) {
-
+            e.preventDefault();
             axios.get(`https://sadimi-eoya.onrender.com/api/employee/${user}`)
                 .then(response => {
                     if (response.data.password === password && response.data.username === user) {
@@ -36,7 +36,7 @@ function Form(props) {
                     }, 4000);
                 });
 
-            e.preventDefault();
+
 
         }
 
@@ -97,17 +97,17 @@ function Form(props) {
             </form>
         )
 
-    } else {
+    } else { // Cuando es Forgot password
 
         function handleClick(e) {
-            let employ = {};
             e.preventDefault();
+            let employ = {};
             axios.get(`https://sadimi-eoya.onrender.com/api/employee/${user}`)
                 .then(response => {
                     employ = response.data;
                     employ.password = password;
 
-                    axios.post(`https://sadimi-eoya.onrender.com/api/employee/${user}`, employ)
+                    axios.patch(`https://sadimi-eoya.onrender.com/api/employee/${user}`, employ)
                         .then(() => {
                             document.getElementById('mensaje2').style.display = 'block';
                             document.getElementById('mensaje2').classList.add('animacion');
@@ -118,8 +118,13 @@ function Form(props) {
 
                         })
                         .catch((e) => {
-                            console.log("No se pudo cambiar la contraseña: Error"+e)
-                            
+                            console.log("No se pudo cambiar la contraseña: Error" + e)
+                            document.getElementById('mensaje').style.display = 'block';
+                            document.getElementById('mensaje').classList.add('animacion');
+                            setTimeout(function () {
+                                document.getElementById('mensaje').style.display = 'none';
+                            }, 4000);
+
                         });
                 })
                 .catch(() => {
@@ -181,6 +186,9 @@ function Form(props) {
                 </div>
                 <div className="btn">
                     <button className="button1" onClick={handleClick}>Change</button>
+                </div>
+                <div className="btn">
+                    <button className="button1" onClick={() => { history.push('/') }}>Back</button>
                 </div>
                 <p ref={messageRef} id='mensaje' style={{ display: "none" }}>Invalid username</p>
                 <p ref={messageRef} id='mensaje2' style={{ display: "none" }}>Password change successful</p>

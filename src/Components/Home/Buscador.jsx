@@ -18,6 +18,7 @@ function Buscador() {
     return (
         <>
             <div id='div_input_buscador'>
+                
                 <input
                     id='input_buscador'
                     onChange={handleChange}

@@ -31,7 +31,9 @@ const Header = (props) => {
                             <li className='li_2' id='home'>Home</li>
                             <li className='li_1' id='data' disabled>Data</li>
                             <li className='li_1' id='cases' disabled>Cases</li>
-                            <li onClick={logOut} className='li_1' id='profile'>{nombre}</li>
+                            <li className='li_2 profile' id='nom'>{nombre}</li>
+                            <li onClick={logOut} className='li_1 profile' id='profile'>Log out</li>
+                            
                         </>
                     ) : (
                         <>
@@ -40,14 +42,16 @@ const Header = (props) => {
                                     <li onClick={pasarHome} className='li_1' id='home'>Home</li>
                                     <li className='li_2' id='data'>Data</li>
                                     <li className='li_1' id='cases' disabled>Cases</li>
-                                    <li onClick={logOut} className='li_1' id='profile'>{nombre}</li>
+                                    <li className='li_2 profile' id='nom'>{nombre}</li>
+                                    <li onClick={logOut} className='li_1 profile' id='profile'>Log out</li>
                                 </>
                             ) : (
                                 <>
                                     <li onClick={pasarHome} className='li_1' id='home'>Home</li>
                                     <li onClick={pasarData} className='li_1' id='data'>Data</li>
                                     <li className='li_2' id='cases'>Cases</li>
-                                    <li onClick={logOut} className='li_1' id='profile'>{nombre}</li>
+                                    <li className='li_2 profile' id='nom'>{nombre}</li>
+                                    <li onClick={logOut} className='li_1 profile' id='profile'>Log out</li>
                                 </>
                             )}
                         </>

@@ -15,7 +15,7 @@ function Search(props) {
 
     function buscar() {
         console.log(props.cedula)
-            axios.get(`https://sadimi-eoya.onrender.com/api/person/${props.cedula}`)
+            axios.get(`https://sadimi-eoya.onrender.com/api/user/${props.cedula}`)
             .then(response => {
                 if (response.data.document === props.cedula) {
                     sessionStorage.setItem("cliente", JSON.stringify(response.data));

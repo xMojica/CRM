@@ -1,0 +1,24 @@
+.containerSup {
+    background-color: var(--secondaryColor);
+    padding: 5%;
+    margin: 5%;
+    border-radius: 30px;
+}
+
+#h1 {
+    width: 100%;
+    text-align: left;
+    color:white;
+    font-size: 2em;
+}
+
+.p {
+    width: 100%;
+    text-align: left;
+    color: var(--cuaternaryColor);
+    font-size: 1.5em;
+}
+
+strong {
+    color: white;
+}

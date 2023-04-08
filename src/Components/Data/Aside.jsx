@@ -7,9 +7,9 @@ function Aside() {
   let foto = "";
   const cliente = JSON.parse(sessionStorage.getItem("cliente"));
   
-  if (cliente.gender === 'Female') {
+  if (cliente.gender === 'female') {
     foto = AvatarMujer;
-  } else if (cliente.gender === 'Male') {
+  } else if (cliente.gender === 'male') {
     foto = AvatarHombre;
   } else {
     foto = AvatarNoBin;

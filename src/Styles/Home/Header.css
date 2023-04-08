@@ -74,10 +74,26 @@ li:active {
   background-color: var(--tertiaryColor);
 }
 
-#profile {
+
+
+.profile {
   margin-left: auto;
   margin-right: 5%;
 }
+
+#nom {
+  margin-left: auto;
+  margin-right: 0;
+  cursor: initial;
+}
+
+#nom:hover {
+  box-shadow: none;
+  transform: none;
+  box-shadow: none
+}
+
+
 
 
   
