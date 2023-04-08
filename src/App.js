@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from './Components/Home/Home.jsx';
+import Forgot from './Components/Login/Forgot.jsx'
 import Login from './Components/Login/Login.jsx';
 import Data from './Components/Data/Data.jsx';
 import Support from './Components/Cases/Support/Support';
@@ -15,6 +16,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Login} />
+          <Route path="/Forgot" component={Forgot} />
           <Route path="/Home" component={Home} />
           <Route path="/Data" component={Data} />
           <Route path="/Support" component={Support} />
