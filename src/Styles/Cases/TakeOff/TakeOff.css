@@ -1,0 +1,64 @@
+#divBotones {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  height: 6%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.boton {
+  background-color: var(--tertiaryColor);
+  padding: auto;
+  border-radius: 100px;
+  width: 30%;
+  cursor: pointer;
+  border: none;
+  height: 3em;
+  font-size: medium;
+  color: var(--cuaternaryColor);
+  box-shadow: 10px 10px 20px rgb(25, 25, 25),
+    -5px -5px 50px rgb(60, 60, 60);
+}
+
+.boton:disabled {
+  pointer-events: none;
+}
+
+.boton:hover {
+  transform: translateY(-2px);
+  background-color: var(--cuaternaryColor);
+  color: var(--secondaryColor);
+  box-shadow: 10px 10px 20px rgb(25, 25, 25),
+    -5px -5px 10px rgb(60, 60, 60);
+
+}
+
+.boton:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+#botonBack:hover {
+  box-shadow: 10px 10px 20px rgb(36, 46, 39),
+    -5px -5px 10px rgb(121, 22, 22);
+  background-color: red;
+  color: white;
+}
+
+/**************************************************************/
+
+/* #mensajeDocument {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+  } */

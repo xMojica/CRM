@@ -26,6 +26,8 @@
     border-radius: 100px;
     width: 30%;
     outline: none;
+    box-shadow: 10px 10px 20px rgb(25, 25, 25),
+    -5px -5px 50px rgb(60, 60, 60);
   }
   
   #input_buscador:disabled {
@@ -64,6 +66,8 @@
     height: 3em;
     font-size:medium ;
     color: var(--cuaternaryColor);
+    box-shadow: 10px 10px 20px rgb(25, 25, 25),
+    -5px -5px 50px rgb(60, 60, 60);
   }
   
   #search:disabled {
@@ -71,10 +75,11 @@
   }
   
   #search:hover {
-   
-    background-color: var(--secondaryColor);
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
+    box-shadow: 10px 10px 20px rgb(36, 46, 39),
+             -5px -5px 50px rgb(0, 255, 255);
+    background-color: var(--secondaryColor);
+    
   }
   
   #search:active {

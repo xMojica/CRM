@@ -9,14 +9,14 @@
     width: 100%;
     text-align: left;
     color:white;
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 .p {
     width: 100%;
     text-align: left;
     color: var(--cuaternaryColor);
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 strong {

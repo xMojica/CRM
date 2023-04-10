@@ -23,9 +23,9 @@ function Aside() {
       <br />
       <h2>{cliente.name}</h2>
       <br />
-      <div className="datos"><h2>{cliente.age}</h2></div>
-      <div className="datos"><h2>{cliente.country}</h2></div>
-      <div className="datos"><h2>{cliente.services}</h2></div>
+      <div className="datos"><h2>Age: {cliente.age}</h2></div>
+      <div className="datos"><h2>Country: {cliente.userId.country}</h2></div>
+      <div className="datos"><h2>Service: {cliente.userId.service}</h2></div>
       <div className="datos"><h2>{cliente.email}</h2></div>
 
 

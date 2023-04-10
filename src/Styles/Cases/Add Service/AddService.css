@@ -1,0 +1,109 @@
+.contenedorMainAdd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondaryColor);
+    width: 80%;
+    padding: 5%;
+    margin: 3%;
+    border-radius: 30px;
+}
+
+.contenedorMainAdd h1 {
+    margin-top: 0;
+    color: white;
+    cursor: pointer;
+
+}
+
+.containerAdd {
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cardAdd {
+    width: 150px;
+    height: 100px;
+    margin: 10px 60px;
+    background-color: var(--secondaryColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cuaternaryColor);
+    box-shadow: 10px 10px 20px rgb(60, 60, 60),
+        -6px -6px 50px rgb(60, 60, 60);
+    border-radius: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    outline: invert;
+}
+
+.cardAdd:hover {
+    box-shadow: 0px 0px 30px 7px rgba(0, 255, 117, 0.30);
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+/*BOTONES*/
+
+#divBotonesAdd {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 5%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.botonAdd {
+    background-color: var(--tertiaryColor);
+    ;
+    border-radius: 100px;
+    width: 30%;
+    cursor: pointer;
+    border: none;
+    height: 3em;
+    font-size: medium;
+    color: var(--cuaternaryColor);
+    box-shadow: 10px 10px 20px rgb(25, 25, 25),
+        -5px -5px 50px rgb(60, 60, 60);
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.botonAdd:hover {
+    transform: translateY(-2px);
+    background-color: var(--cuaternaryColor);
+    color: var(--secondaryColor);
+    box-shadow: 10px 10px 20px rgb(25, 25, 25),
+        -5px -5px 10px rgb(60, 60, 60);
+
+}
+
+#botonBackAdd:hover {
+    box-shadow: 10px 10px 20px rgb(36, 46, 39),
+        -5px -5px 10px rgb(121, 22, 22);
+    background-color: red;
+    color: white;
+}
+
+/**************************************************************/
+
+/* #mensajeDocument {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+  } */
