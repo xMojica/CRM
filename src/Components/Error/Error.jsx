@@ -3,7 +3,7 @@ import React from 'react'
 function error() {
   return (
     <>
-      <h1>la pagina no existe</h1>
+      <h1 style={{ color: 'white' }}>La pagina no se ha encontrado</h1>
     </>
   )
 }
