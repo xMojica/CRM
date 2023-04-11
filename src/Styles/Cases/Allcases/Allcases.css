@@ -1,0 +1,21 @@
+.contenedorAll {
+    margin: auto;
+    margin-top: 3%;
+    padding: 50px 0;
+     background-color: var(--secondaryColor); 
+     width: 80%;
+     border-radius: 40px;
+}
+
+.case {
+    margin: auto;
+    width: 50%;
+    background-color: var(--secondaryColor);
+    border-radius: 30px;
+}
+
+.contenedorAll h2 {
+    color: white;
+    display: flex;
+    justify-content: center;
+}

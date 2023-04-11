@@ -16,6 +16,10 @@ const Header = (props) => {
     history.push("/data");
   }
 
+  function pasarAll(){
+    history.push("/Allcases");
+  }
+
   function logOut() {
     history.push("/");
   }
@@ -35,6 +39,9 @@ const Header = (props) => {
               </li>
               <li className="li_1" id="cases" disabled>
                 Cases
+              </li>
+              <li className="li_1" id="all-cases">
+                AllCases
               </li>
               <li className="li_2 profile" id="nom">
                 {nombre}
@@ -56,6 +63,11 @@ const Header = (props) => {
                   <li className="li_1" id="cases" disabled>
                     Cases
                   </li>
+                  {props.atri === "data" || props.atri === "cases" ? (
+                    <li className="li_1" id="all-case" onClick={pasarAll}>
+                      AllCases
+                    </li>
+                  ) : null}
                   <li className="li_2 profile" id="nom">
                     {nombre}
                   </li>
@@ -74,6 +86,11 @@ const Header = (props) => {
                   <li className="li_2" id="cases">
                     Cases
                   </li>
+                  {props.atri === "data" || props.atri === "cases" ? (
+                    <li className="li_1" id="all-cases" onClick={pasarAll}>
+                      AllCases
+                    </li>
+                  ) : null}
                   <li className="li_2 profile" id="nom">
                     {nombre}
                   </li>
@@ -84,6 +101,7 @@ const Header = (props) => {
               )}
             </>
           )}
+
         </ul>
       </nav>
     </header>
