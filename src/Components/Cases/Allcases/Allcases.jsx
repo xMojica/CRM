@@ -9,13 +9,33 @@ function Allcases() {
     const [cases, setCases] = useState({});
     const history = useHistory();
 
+
+    function enviarPDF() {
+        const cliente = JSON.parse(sessionStorage.getItem("cliente"));
+        axios
+            .post(`https://sadimi-eoya.onrender.com/api/pdf/${cliente.document}`, {
+                destinatario: "samojica08@gmail.com" // como prueba pero realmente aca va
+                                                     // cliente.email que es el email del cliente
+                                                     // Nota: Si quiere probarlo cambie el atributo destinatario
+                                                     // y coloque su correo personal
+            })
+            .then((response) => {
+                console.log("envio el PDF al correo");
+                console.log(response.data);
+            })
+            .catch(() => {
+
+            });
+
+
+    }
+
+
     useEffect(() => {
         const cliente = JSON.parse(sessionStorage.getItem("cliente"));
-
         axios
             .get(`https://sadimi-eoya.onrender.com/api/cases/${cliente.document}`)
             .then((response) => {
-                console.log(response.data);
                 setCases(response.data)
             })
             .catch(() => {
@@ -25,22 +45,25 @@ function Allcases() {
 
     return (
         <>
-        <Header atri={"allcases"}/>
+            <Header atri={"allcases"} />
             <div className="contenedorAll">
                 <h2>Document: {cases.document}</h2>
                 <br />
                 <div className="case">
-                    {cases.Array && cases.Array.map((i) => (
-                        <>
-                            <h2 key={i.id}>Description: {i.description}</h2>
-                            <h2 key={i.id}>Type: {i.type}</h2>
-                            <h2 key={i.id}>Date: {i.date}</h2>
-                        </>
+                    {cases.Array && cases.Array.map((i, index) => (
+                        
+                        <div key={index}>
+                            <hr />
+                            <h2>Description: {i.description}</h2>
+                            <h2>Type: {i.type}</h2>
+                            <h2>Date: {i.date}</h2>
+                            
+                        </div>
+                        
                     ))}
                 </div>
                 <br />
                 <div id="divBotones">
-
                     <button
                         className="boton"
                         id="botonBack"
@@ -50,11 +73,14 @@ function Allcases() {
                     >
                         Back
                     </button>
-
+                    <button className="boton" onClick={enviarPDF}>
+                        Accept
+                    </button>
                 </div>
             </div>
         </>
-    )
+    );
+
 }
 
 export default Allcases;
