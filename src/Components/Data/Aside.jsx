@@ -28,7 +28,7 @@ function Aside() {
         <h2>Country: {cliente.userId.country}</h2>
       </div>
       <div className="datos">
-        <h2>Service: {cliente.userId.service}</h2>
+        <h2>Service: {cliente.userId.services[0]}</h2>
       </div>
       <div className="datos">
         <h2>{cliente.email}</h2>
