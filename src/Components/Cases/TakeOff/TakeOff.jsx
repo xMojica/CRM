@@ -11,7 +11,7 @@ function TakeOff() {
   function enviar() {
 
     console.log(cliente.document)
-    axios.post(`https://sadimi-eoya.onrender.com/api/cases`, {
+    axios.patch(`https://sadimi-eoya.onrender.com/api/cases`, {
       document: cliente.document,
       description: `The client ${cliente.name} wants to cancel the service`,
       type: "Take off"
@@ -19,6 +19,7 @@ function TakeOff() {
     }) // en un objeto envio el descriptionField
       .then(response => {
         console.log(response.data)
+        history.push('/Data')
       })
       .catch(() => {
 
