@@ -23,7 +23,7 @@ y otras dependencias que se instalarán al momento de abrir la consola y ejecuta
 
 ## Uso
 
-El use de esta aplicación se encuentra documentado en el siguiente archivo
+El use de esta aplicación se encuentra documentado en un archivo que esta en la carpeta principal 
 
 ## Características
 
