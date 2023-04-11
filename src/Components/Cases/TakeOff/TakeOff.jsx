@@ -7,13 +7,12 @@ import axios from "axios";
 function TakeOff() {
   const history = useHistory();
   const cliente = JSON.parse(sessionStorage.getItem("cliente"));
+ 
 
   function cancelar() {
+    cliente.userId.services[0] = null
     axios
-      .patch(`https://sadimi-eoya.onrender.com/api/cases/${cliente.document}`, {
-        description: '`The client ${cliente.name} wants to cancel the service ${cliente.userId.services[0]}`',
-        type: "Take off",
-      }) // en un objeto envio el descriptionField
+      .patch(`https://sadimi-eoya.onrender.com/api/cases/${cliente.document}`, cliente) // en un objeto envio el descriptionField
       .then((response) => {
         console.log(response.data);
         history.push("/Data");
