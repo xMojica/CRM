@@ -73,8 +73,8 @@ function Allcases() {
                     >
                         Back
                     </button>
-                    <button className="boton" onClick={SendPDF}>
-                        Accept
+                    <button className="boton" onClick={enviarPDF}>
+                        SendPDF
                     </button>
                 </div>
             </div>
