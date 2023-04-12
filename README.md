@@ -30,7 +30,7 @@ Estas listo para navegar por la aplicacion,
 
 Para el uso de esta aplicacion debe ingresar al siguiente link: https://sadimi-suj6.onrender.com si desea acceder a la pagina desplegada o abrir el navegador y ejecutar el comando http://localhost:3000 para abrir la aplicacion desde un entorno local.
 
-Si deseas conocer el comportamiento de la aplicacion lo invitamos a que lea la documentacion que se encuentra en la carpeta raiz
+Si deseas conocer el comportamiento de la aplicacion lo invitamos a que lea la documentacion que se encuentra en el archivo Documentation.pdf
 
 
 ## Credenciales de inicio
