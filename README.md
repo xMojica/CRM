@@ -16,14 +16,20 @@ y otras dependencias que se instalarán al momento de abrir la consola y ejecuta
 
 ## Instalación
 
-1. Clonar el repositorio
-2. Instalar las dependencias en el front y en el back con `npm install`
-3. Iniciar la API con `npm run dev`
-4. Iniciar el Front con ‘ npm start ‘
+1. Copiar la URL del repositorio
+2. Abrir la consola de git y ejecutar el comando 'git clone: URL' 
+3. Cambia la palabra URL por el link del repositorio que tienes copiado
+4. Ejecuta el comando code . para visualizar el codigo en el editor de codigo
+5. Abre la consola y ejecuta el comando 'npm install' para instalar todas las dependencias
+6. Desde la misma terminal ejecutar el comando 'npm start'
+
+Estas listo para navegar por la aplicacion,
 
 ## Uso
 
-El use de esta aplicación se encuentra documentado en un archivo que esta en la carpeta principal 
+Para el uso de esta aplicacion debe ingresar al siguiente link: https://sadimi-suj6.onrender.com si desea acceder a la pagina desplegada o abrir el navegador y ejecutar el comando http://localhost:3000 para abrir la aplicacion desde un entorno local.
+
+Si deseas conocer el comportamiento de la aplicacion lo invitamos a que lea la documentacion que se encuentra en la carpeta raiz
 
 ## Características
 
@@ -40,6 +46,8 @@ El use de esta aplicación se encuentra documentado en un archivo que esta en la
 - MongoDB
 - Render
 - Mongoose
+- Api
+- Axios
 
 
 ## Créditos
@@ -47,7 +55,8 @@ El use de esta aplicación se encuentra documentado en un archivo que esta en la
 Autores:
 Santiago Mojica Jimenez ( Desarrollador Front )
 Diego Alejandro Martinez Pineda ( Desarrollador Back y Database )
-Miguel Bañol ( Desarrollador Back )
+Miguel Angel Bañol ( Desarrollador Back )
+
 
 ## Fecha
 
