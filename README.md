@@ -19,9 +19,10 @@ y otras dependencias que se instalarán al momento de abrir la consola y ejecuta
 1. Copiar la URL del repositorio
 2. Abrir la consola de git y ejecutar el comando 'git clone: URL' 
 3. Cambia la palabra URL por el link del repositorio que tienes copiado
-4. Ejecuta el comando code . para visualizar el codigo en el editor de codigo
-5. Abre la consola y ejecuta el comando 'npm install' para instalar todas las dependencias
-6. Desde la misma terminal ejecutar el comando 'npm start'
+4. Ejecuta el comando cd CRM/ y presiona enter
+5. Ejecuta el comando code . para visualizar el codigo en el editor de codigo
+6. Abre la consola del editor con CTRL + ñ y ejecuta el comando 'npm install' para instalar todas las dependencias
+7. Desde la misma terminal ejecutar el comando 'npm start'
 
 Estas listo para navegar por la aplicacion,
 
