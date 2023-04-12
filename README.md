@@ -31,6 +31,33 @@ Para el uso de esta aplicacion debe ingresar al siguiente link: https://sadimi-s
 
 Si deseas conocer el comportamiento de la aplicacion lo invitamos a que lea la documentacion que se encuentra en la carpeta raiz
 
+
+## Credenciales de inicio
+
+Empleados:
+
+Usuario:miguel
+contraseña: miguel1
+
+Usuario: santiago
+contraseña: santiago08
+
+Usuario: diego
+contraseña: diego21
+
+Con alguno de estos usuarios podras entrar a la aplicacion
+
+Clientes registrados con cedula:
+
+- 7064852615
+- 1930956101
+- 5917603134
+- 9109900128
+- 1517640634
+- 5669292569
+- 8798234318
+- 4339921831
+
 ## Características
 
 - CRM
