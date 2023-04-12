@@ -14,7 +14,7 @@ function Allcases() {
         const cliente = JSON.parse(sessionStorage.getItem("cliente"));
         axios
             .post(`https://sadimi-eoya.onrender.com/api/pdf/${cliente.document}`, {
-                destinatario: "samojica08@gmail.com" // como prueba pero realmente aca va
+                destinatario: "tostadablandita@gmail.com" // como prueba pero realmente aca va
                                                      // cliente.email que es el email del cliente
                                                      // Nota: Si quiere probarlo cambie el atributo destinatario
                                                      // y coloque su correo personal
@@ -22,6 +22,7 @@ function Allcases() {
             .then((response) => {
                 console.log("envio el PDF al correo");
                 console.log(response.data);
+                history.push('/Data')
             })
             .catch(() => {
 
